@@ -15,5 +15,10 @@ export interface HotelModel {
     public amenities: string[];
 
     constructor() {
+        this.id = '';
+        this.name = '';
+        this.stars = null;
+        this.image = '';
+        this.amenities = [];
     }
   }

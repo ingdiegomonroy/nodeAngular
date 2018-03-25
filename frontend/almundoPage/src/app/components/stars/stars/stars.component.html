@@ -1,0 +1,8 @@
+<div class="stars">
+  <input type="checkbox" [(ngModel)]="checked" *ngIf="allowInput" (change)="selectStar()" >
+  <i class="stars stars__list" *ngFor="let star of stars">
+    <svg width="20" height="20">
+      <use xlink:href="#star" />
+    </svg>
+  </i>
+</div>

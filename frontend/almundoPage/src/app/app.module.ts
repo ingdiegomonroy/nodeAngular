@@ -6,17 +6,30 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
+import { HotelService } from './services/hotel.service';
+import { HeaderComponent } from './components/header/header.component';
+import { FiltersComponent } from './components/filters/filters.component';
+import { ListHotelsComponent } from './components/list-hotels/list-hotels.component';
+import { SvgIconsComponent } from './components/svg-icons/svg-icons.component';
+import { StarsComponent } from './components/stars/stars/stars.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FiltersComponent,
+    ListHotelsComponent,
+    SvgIconsComponent,
+    StarsComponent
   ],
   imports: [
     BrowserModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [HotelService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

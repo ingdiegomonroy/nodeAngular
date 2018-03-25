@@ -1,0 +1,94 @@
+:host{
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f4f4;
+    height: 400px;
+}
+.filters{
+    box-shadow: 0px 0px 6px #d5d5d5;
+    padding-bottom: 5px;
+    &__header {
+        height: 30px;
+        background-color: #fff;
+        margin-bottom: 5px;
+        height: 40px;
+        span{
+            display: block;
+            padding: 10px;
+            line-height: 20px;
+            font-weight: 600;
+        }
+    }
+    &__name{
+        margin-top: 2px;
+        background-color: #fff;
+        padding-top: 10px;
+        padding-left: 10px;
+        &-head{
+            height: 40px;
+            .icon{
+                vertical-align: text-bottom;
+                svg{
+                    fill:#157ab1;
+                }
+            }
+            span{
+                color: #157ab1;
+                font-weight: 600;
+                vertical-align: super;
+                margin-left: 10px;
+            }
+        }
+        &-actions{
+            display: flex;
+            input{
+                flex: 4;
+                margin: 5px 5px 10px;
+            }
+            button{
+                flex: 1;
+                margin: 5px 5px 10px;
+                background-color: #002c77;
+                border: none;
+                border-radius: 2px;            
+            }
+        }
+        
+    }
+    &__stars{
+        margin-top: 5px;
+        background-color: #fff;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-bottom: 10px;
+        &-head{
+            height: 40px;
+            .icon{
+                vertical-align: text-bottom;
+                svg{
+                    fill:#157ab1;
+                }
+            }
+            span{
+                color: #157ab1;
+                font-weight: 600;
+                vertical-align: super;
+                margin-left: 10px;
+            }
+        }
+        &-rank{
+            &--head{
+                margin-left: 5px;
+                input{
+                    width: 15px;
+                    height: 15px;
+                }
+                span{
+                    margin-left: 10px;
+                    vertical-align: text-bottom;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

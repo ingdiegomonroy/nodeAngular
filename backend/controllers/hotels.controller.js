@@ -4,7 +4,7 @@ _this = this
 
 
 exports.getHotels = async function(req, res, next){
-    console.log(req.param.filters)
+    console.log("llego la peticios")
     try{
         var hotels = JSON.parse(await hotelsService.getHotels());
         return res.status(200).json({status: 200, data: hotels, message: "Succesfully Hotels Recieved"});

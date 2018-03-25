@@ -1,0 +1,42 @@
+<div class="filters ">
+  <div class="filters__header">
+    <span>Filtros</span>
+  </div>
+  <div class="filters__name">
+    <div class="filters__name-head">
+        <i class="icon icon__search">
+            <svg width="20" height="20" ><use xlink:href="#search" /></svg> 
+        </i>
+        <span>Nombre del Hotel</span>
+        <i class="icon icon__arrow"></i>
+    </div>
+    <div class="filters__name-actions">
+        <input class="form-control" type="text" placeholder="Ingrese el nombre del hotel" [(ngModel)]="hotelName" (blur)="blurButton()">
+        <button class="btn btn-primary" (click)="actionButton()">Aceptar</button>
+    </div>
+  </div>
+
+  <div class="filters__stars">
+      <div class="filters__stars-head">
+          <i class="icon icon__stars">
+              <svg width="20" height="20" ><use xlink:href="#star" /></svg> 
+          </i>
+          <span>Estrellas</span>
+          <i class="icon icon__arrow"></i>
+      </div>
+      <div class="filters__stars-rank">
+        <div class="filters__stars-rank--head">
+            <input type="checkbox" (change)="selectAllStars()" >
+            <span>Todas las estrellas</span>
+        </div>
+        <div class="filters__stars-rank-component">
+          <app-stars [totalStars]=5 [allowInput]=true></app-stars>
+          <app-stars [totalStars]=4 [allowInput]=true></app-stars>
+          <app-stars [totalStars]=3 [allowInput]=true></app-stars>
+          <app-stars [totalStars]=2 [allowInput]=true></app-stars>
+          <app-stars [totalStars]=1 [allowInput]=true></app-stars>
+        </div>
+      </div>
+  </div>
+
+</div>
