@@ -1,0 +1,60 @@
+:host{
+    .hotel{
+        min-height: 250px;
+        max-height: 275px;
+        padding: 10px;
+        margin-left: 5px;
+        &__image{
+            background-position: center;
+            background-size: cover;
+        }
+        &__name{
+            h4{
+                color: #157ab1;
+                margin-left: 10px;
+            }
+        }
+        &__amenities{
+            margin-left: 8px;
+            i{
+                padding: 5px;
+            }
+        }
+        &__description{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &-detail{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                button{
+                    background-color: #002c77;
+                    border: none;
+                    border-radius: 2px;
+                    font-weight: 700;   
+                }
+                h5{
+                    width: 200px;
+                    font-size: 1rem;
+                    color: #444444;
+                    font-weight: 400;
+                    text-align: center;
+                }
+                p{
+                    font-size: 1.2rem;
+                    color: #df6800;
+                    margin-top: 5px;
+                    span{
+                        font-size: 2rem;
+                        font-weight: bold;
+                        vertical-align: sub;
+                        line-height: 12px;
+                    
+                    }
+                }
+            }
+        }
+    }
+}

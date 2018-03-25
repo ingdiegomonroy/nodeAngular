@@ -1,0 +1,21 @@
+
+    <div class="row hotel">
+        <div class="col-md-4 hotel__image" [ngStyle]="{ 'background-image': 'url(assets/images/' +  hotelDetail.image  + ')'}"></div>
+        <div class="col-md-5 hotel__name">
+          <h4>{{hotelDetail.name}}</h4>
+          <app-stars [totalStars]=hotelDetail.stars [allowInput]=false></app-stars>
+          <div class="hotel__amenities">
+              <i class="icon" *ngFor="let icon of hotelDetail.amenities">
+                  <svg width="20" height="20" ><use [attr.xlink:href]="'#'+icon" /></svg> 
+              </i>
+          </div>
+        </div>
+        <div class="col-md-3 hotel__description">
+          <div class="hotel__description-detail">
+            <h5>Precio por noche por habitación</h5>
+            <p>ARS <span>{{hotelDetail.price}}</span></p>
+            <button class="btn btn-primary">Ver hotel</button>
+          </div>
+        </div>
+    </div>
+  

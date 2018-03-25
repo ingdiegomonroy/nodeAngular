@@ -12,6 +12,7 @@ import { FiltersComponent } from './components/filters/filters.component';
 import { ListHotelsComponent } from './components/list-hotels/list-hotels.component';
 import { SvgIconsComponent } from './components/svg-icons/svg-icons.component';
 import { StarsComponent } from './components/stars/stars/stars.component';
+import { HotelCardComponent } from './components/hotelCard/hotel-card/hotel-card.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { StarsComponent } from './components/stars/stars/stars.component';
     FiltersComponent,
     ListHotelsComponent,
     SvgIconsComponent,
-    StarsComponent
+    StarsComponent,
+    HotelCardComponent
   ],
   imports: [
     BrowserModule,

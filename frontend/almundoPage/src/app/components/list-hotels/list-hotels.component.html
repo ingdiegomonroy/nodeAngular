@@ -1,3 +1,3 @@
-<div *ngFor="let hotel of listHotels">
-  <li>{{hotel.name}}</li>
+<div class="hotel__container" *ngFor="let hotel of listHotels">
+  <app-hotel-card [hotelDetail]= hotel></app-hotel-card>
 </div>
