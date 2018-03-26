@@ -3,7 +3,7 @@ import { HotelModel } from './../models/hotel.model';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpHeaders, HttpParams } from '@angular/common/http';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import {Response, RequestOptions} from '@angular/http';
 
@@ -43,14 +43,28 @@ export class HotelService {
       this.filter.name = name;
     }
     getHotels(): Observable<HotelModel[]> {
-      // const options = this.configureHeaders();
-      return this.http.get(this.hotelsUrl)
+      const headers = new HttpHeaders();
+      headers.append('Content-Type', 'application/json');
+      return this.http.get(`${this.hotelsUrl}`)
       .map(res  => {
         return res['data'];
       });
     }
-    getDetailHotels() {
-      console.log(this.filter);
+
+    getDetailHotels(): Observable<HotelModel[]> {
+      const headers = new HttpHeaders();
+      headers.append('Content-Type', 'application/json');
+
+      const applyFilter = {
+        name: (this.filter.name) ? this.filter.name : '',
+        stars: (this.filter.stars) ? this.filter.stars : []
+      };
+
+      // return this.http.post(`${this.hotelsUrl}`, '{name:' + applyFilter.name + ', stars:' + applyFilter.stars + '}')
+      return this.http.post(`${this.hotelsUrl}`, applyFilter)
+      .map(res  => {
+        return res['data'];
+      });
     }
 
 }

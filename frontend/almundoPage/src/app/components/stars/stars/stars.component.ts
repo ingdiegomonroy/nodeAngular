@@ -16,7 +16,6 @@ export class StarsComponent implements OnInit {
 
   ngOnInit() {
     this.setStars();
-    console.log(typeof this.totalStars);
   }
 
   setStars() {

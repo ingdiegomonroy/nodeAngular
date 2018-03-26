@@ -12,6 +12,7 @@ export class ListHotelsComponent implements OnInit {
 
   constructor(private hotelService: HotelService) { }
   listHotels$: Observable<HotelModel[]>;
+  listDetailHotels$: Observable<HotelModel[]>;
   listHotels = [];
 
   ngOnInit() {
@@ -24,6 +25,12 @@ export class ListHotelsComponent implements OnInit {
     listHotels$.subscribe(hotels => {
       this.listHotels = hotels;
     });
+  }
+  getDetailHotels(data) {
+    if ( data ) {
+      this.listHotels = [];
+      this.listHotels = data;
+    }
   }
 
 }

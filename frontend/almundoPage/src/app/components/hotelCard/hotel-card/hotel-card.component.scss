@@ -1,12 +1,15 @@
 :host{
     .hotel{
         min-height: 250px;
-        max-height: 275px;
         padding: 10px;
         margin-left: 5px;
         &__image{
             background-position: center;
             background-size: cover;
+            p{
+                display: block;
+                min-height: 250px;
+            }
         }
         &__name{
             h4{
@@ -19,6 +22,17 @@
             i{
                 padding: 5px;
             }
+        }
+        &__separator{
+            @media only screen and (min-width: 768px) {
+                border-right: 1px #cccccc dashed;
+            }
+            @media only screen and (max-width: 600px) {
+                width: 95%;
+                margin: 15px 0px 15px 0px;
+                border-top: 1px #cccccc dashed;
+            }
+            
         }
         &__description{
             display: flex;

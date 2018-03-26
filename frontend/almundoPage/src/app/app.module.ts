@@ -13,6 +13,7 @@ import { ListHotelsComponent } from './components/list-hotels/list-hotels.compon
 import { SvgIconsComponent } from './components/svg-icons/svg-icons.component';
 import { StarsComponent } from './components/stars/stars/stars.component';
 import { HotelCardComponent } from './components/hotelCard/hotel-card/hotel-card.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { HotelCardComponent } from './components/hotelCard/hotel-card/hotel-card
     BrowserModule,
     NgbModule.forRoot(),
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [HotelService],
   bootstrap: [AppComponent]

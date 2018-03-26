@@ -7,7 +7,7 @@
 
   <div class="row row__content">
     <div class="col-md-3">
-      <app-filters></app-filters>
+      <app-filters (showNewHotelDetail)="showNewHotelDetail($event)"></app-filters>
     </div>
     <div class="col-md-9">
       <app-list-hotels></app-list-hotels>
