@@ -40,8 +40,7 @@ export class FiltersComponent implements OnInit {
     this.helpFiltersOpen = 'in';
   }
   toggleFilters(): void {
-    console.log(this.helpFiltersOpen);
-    this.helpFiltersOpen = this.helpFiltersOpen === 'out' ? 'in' : 'out';
+    // this.helpFiltersOpen = this.helpFiltersOpen === 'out' ? 'in' : 'out';
   }
   actionButton() {
     const listDetailHotels$ = this.hotelService.getDetailHotels();
