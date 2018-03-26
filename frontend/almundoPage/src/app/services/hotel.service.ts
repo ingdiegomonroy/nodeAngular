@@ -36,7 +36,15 @@ export class HotelService {
         this.filter.stars.sort();
       }
     }
-    setAllStars() {
+    setAllStars(value) {
+      if ( value ) {
+        this.filter.stars = [1, 2, 3, 4, 5];
+      } else {
+        this.filter.stars = [];
+      }
+    }
+
+    removeAllStars() {
       this.filter.stars = [];
     }
     setNameFilter(name) {

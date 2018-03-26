@@ -15,9 +15,7 @@ exports.getHotelsByFilter = async function (params) {
     var response = [];
     var stars = [];
     // Get star or request
-    if( params.stars.length < 1){
-        stars = [1,2,3,4,5];
-    }else{
+    if( params.stars.length > 0){
         for(var i = 0; i < params.stars.length; i++ ){
             stars.push(params.stars[i]);
         }

@@ -27,7 +27,14 @@ export class ListHotelsComponent implements OnInit {
     });
   }
   getDetailHotels(data) {
-    if ( data ) {
+    if (data.length < 1) {
+      const listHotels$ = this.hotelService.getHotels();
+      this.listHotels = [];
+      listHotels$.subscribe(hotels => {
+        this.listHotels = hotels;
+      });
+    }
+    if (data) {
       this.listHotels = [];
       this.listHotels = data;
     }

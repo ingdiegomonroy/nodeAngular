@@ -35,6 +35,7 @@ export class FiltersComponent implements OnInit {
   listDetailHotels$: Observable<HotelModel[]>;
   listHotels = [];
   helpFiltersOpen: string;
+  checked = false;
 
   ngOnInit() {
     this.helpFiltersOpen = 'in';
@@ -47,7 +48,6 @@ export class FiltersComponent implements OnInit {
     this.listHotels = [];
     listDetailHotels$.subscribe(hotels => {
       this.listHotels = hotels;
-      console.log(typeof this.listHotels);
       this.showNewHotelDetail.emit(this.listHotels);
     });
   }
@@ -55,7 +55,7 @@ export class FiltersComponent implements OnInit {
     this.hotelService.setNameFilter(this.hotelName);
   }
   selectAllStars() {
-    this.hotelService.setAllStars();
     this.stars.forEach(star => star.checkStar());
+    this.hotelService.setAllStars(this.checked);
   }
 }

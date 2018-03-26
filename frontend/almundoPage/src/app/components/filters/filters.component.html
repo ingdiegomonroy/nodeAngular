@@ -26,7 +26,7 @@
       </div>
       <div class="filters__stars-rank">
         <div class="filters__stars-rank--head">
-            <input type="checkbox" (change)="selectAllStars()" >
+            <input type="checkbox" [(ngModel)]="checked" (change)="selectAllStars()" >
             <span>Todas las estrellas</span>
         </div>
         <div class="filters__stars-rank-component">
